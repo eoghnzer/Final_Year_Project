@@ -529,4 +529,67 @@ If we know consider the first Friedmann equation and write it using the reduced 
   \begin{equation}
       \delta T^0 {}_i = \dot{\phi_0}\partial_i(\delta \phi)
   \end{equation}
+  As detailed explicitly in (hobson estathiou and lasenby) the end result of this work is an equation that relates the perturbed scalar field $\delta\phi$ and the infinitesimal potential $\Phi$. The result is in fact two equations 
+  \begin{equation}
+      \dot{\Phi} + H\Phi = \frac{1}{2}\dot{\phi_0}\partial_i(\delta \phi)
+  \end{equation}
+  and 
+  \begin{equation}
+      (\phi_0 ^2 +2\nabla^2)\Phi = \phi_0 ^2 \frac{d}{dt}(\frac{\delta \phi}{\dot{\phi}_0}
+  \end{equation}
   
+  The more common technique in research today is to use the fourier decomposition of these functions to better describe the perturbations. In thta case $\delta \phi$ and $\Phi$ can be decomposed as 
+  \[\delta \phi (\Vec{x}) = \frac{1}{(2\pi)^{\frac{3}{2}}} \int \delta\phi_{\Vec{k}} e^{(i \Vec{k} \cdot \Vec{x})} d^3\Vec{k} \]
+  
+  and 
+  
+  \[ \Phi(\Vec{x}) = \frac{1}{(2\pi)^{\frac{3}{2}}} \int Phi_{\Vec{k}} e^{(i \Vec{k} \cdot \Vec{x})} d^3\Vec{k} \]
+  
+  Where $\Phi_{\Vec{k}$ and $\delta\phi_{\Vec{k}$ are the mode amplitudes of the corresponding plane wave perturbations depending solely on the comoving wave vector $\Vec{k}$. The physical wave vector is then $\frac{k}{a(t)}$ where $a(t)$ is the scale factor due to the expansion of the universe. The next logical step is to decouple the two first order equations in to a single second order equation. However there is a problem in that the variable used, although natural are not $\textit{gauge invariant}$. That is, if one transformed to a new time coordinate, we could easily consider a transformation such that the perturbation vanishes. The preferred method in cosmology is to use gauge independent variables, differing from the view taken in Classical Electrodynamics (where a gauge is fixed, often the Coulomb gauge, and the equations expressed in terms on gauge dependent variables $A_{\mu}$ etc) as where in that case it simplifies mastters with less equatinos to solve the same is not true in this case (insert mukhanov 1992 paper). 
+  The above two equations expressed in terms of Fourier variables is easily seen to be (noting that the spatial derivative does $\textbf{not}$ correspond to multiplying by $ik$ but rather $\frac{ik}{a(t)}$ so that (1.63) and (1.64) now become 
+  \begin{equation}
+      \dot{\Phi_{\Vec{k}}} + H\Phi_{\Vec{k}} = \frac{1}{2}\dot{\phi_0}\partial_i(\delta \phi_{\Vec{k}})
+  \end{equation}
+  and
+  \begin{equation}
+      (1-\frac{2k^2}{a^2 \dot{\phi_0}^2})\Phi_{\Vec{k}} = \phi_0 ^2 \frac{d}{dt}(\frac{\delta \phi_{\Vec{k}}}{\dot{\phi}_0}
+  \end{equation}
+  
+  To construct such variables consider first the change in a general function when under a gauge transformation $t \rightarrow t+\delta t$. This is simply the Lie Derivative and so 
+  \begin{equation}
+      \delta f = -\dot{f}\delta t
+  \end{equation}
+  
+  First recall (1.63) and sub in for $\dot{\phi_0}$ using $\dot{\phi_0} = \frac{\delta \phi}{\Delta t}$ so that to first order 
+  \begin{align}
+      \dot{\Phi} + H\Phi = \frac{1}{2}\frac{(\delta \phi)^2}{\Delta t} 
+      \approx 0 \nonumber \\
+      \Rightarrow \dot{\Phi} = - H\Phi
+  \end{align}
+   Now with $f = a^2(1-2\Phi)$ 
+  \begin{align}
+    \Delta f = (2a\dot{a}(1-2\Phi) - 2a^2 \dot{\Phi})\Delta t \nonumber \\
+    = 2((a^2 H(1-2\Phi) - 2a^2\dot{\Phi})\Delta t \nonumber 
+  \end{align}
+   using $a\dot{a} = a^2 H$, so that now using (1.68) it becomes
+   \begin{align}
+      \Delta f = 2a^2 H(1-2\Phi)\Delta t + 4a^2H\Phi \Delta t \nonumber \\
+      = 2a^2H\Delta t
+  \end{align}
+  so that
+  \begin{equation}
+      \Delta \Phi = H\Delta t = H\frac{\delta f}{\dot{f}}
+  \end{equation}
+Therefore $\Phi + \Delta \Phi$ is gauge invariant so the combination of 
+\begin{equation}
+    \zeta = \Phi + \frac{H\delta \phi}{\dot{\phi_0}}
+\end{equation}  
+is a gauge independent variable.
+
+\subsection{Quantisation and Initial Conditions}
+To compute a spectrum of curvature perturbations, we need to know what sets the initial conditions of the perturbation $\zeta_{\Vec{k}$. Since the fluctuations are quantum in their nature, one needs to quantise the above discussed "classical" perturbations. This is discussed in detail in (mukhanov 1992 again, include other references re quantisation) but I will briefly discuss the results as given in (hobson efstathiou and lasenby) as it offers a more clear and intuitive understanding of the perturbations. 
+
+To begin teh discussion, we first switch to conformal time $\eta$ and to a new variable $\xi$ with $\xi_{\vec{k}} = \frac{a \dot{\phi_0}}{H} \zeta_{\vec{k}} $
+
+
+
