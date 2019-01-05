@@ -493,3 +493,40 @@ If we know consider the first Friedmann equation and write it using the reduced 
   \end{equation}
   
   Substituting these two expressions into (1.55) gives the $\textit{slow roll potential parameter} \ \epsilon_{v} = \frac{M_{pl}^2}{2} (\frac{V'}{V})^2$. The acceleration parameter is defined as $\eta_{v} = M_{pl}^2 \mid\frac{V''}{V}\mid$. So given a potential $V(\phi)$, $\textit{slow roll inflation}$ occurs if $\epsilon_{v}, \mid \eta_{v}\mid << 1 $.
+  
+   \section{Scalar Field Perturbation}
+  As we have seen, inflation is an effective method of explaining the horizon problem but recent research has shown that it also offers an explanation for a more fundamental problem : that of the structure of the universe itself. Inflation provides a method of generating the fluctuations needed to generate the large scale structure of the universe as we know it today. 
+  As seen explicitly in (Mukhanov, feldman, brandenburger theory of cosmological perturbations) the structure originates from the amplification of $\textit{quantum fluctuations}$ of the scalar field during the period of inflation.
+  
+  To give a brief introduction to this mode of thought consider a perturbation of the scalar field that depends on $\textbf{both}$ position and time on a spatially flat background with perturbed metric 
+  \begin{equation}
+      ds^2 = (1+2\Phi)dt^2 - (1-2\Phi)d\textbf{x}^2 
+  \end{equation}
+  where $\phi$ is a infinitesimal function of all 4 spacetime coordinates. We can use this smallness to approximate and only work to first order in $\Phi$.
+  Our next step is to compute the perturbed Einstein equations. This is done rather well in (insert Hobson, Efstathiou and lasenby) but I will derive a a part underived in the book for clarity. 
+  The connection coefficients have the form $\Gamma^{\sigma} {}_{\nu \mu} = (\Gamma_0)^{\sigma} {}_{\nu \mu} + \delta \Gamma^{\sigma} {}_{\nu \mu}$
+  
+  Consider $\Gamma^0 {}_{0\mu}$. Using the fact that the unperturbed connection component was already shown to be zero (1.19, 1.20) and that the metric is diagonal ; 
+  \begin{align}
+      \Gamma^0 {}_{0\mu} = \frac{1}{2} g^{0\lambda} (\partial_{\mu} g_{0\mu} + \partial g_{\mu \lambda} - \partial_{\lambda} g_{0\mu}) \nonumber \\
+        = \frac{1}{2} g^{00}(\partial_{\mu}g_{00} + \partial_0 g_{\mu0} - \partial_0 g_{0\mu} ) \nonumber \\
+        = \frac{1}{2} g^{00}\partial_{\mu}g_{00} \nonumber \\
+        = (1+2\Phi)^{-1}\partial_{\mu}\Phi 
+   \end{align}
+  
+  Expanding (1.59) and neglecting second order terms in $\Phi$ gives 
+  \begin{equation}
+      \Gamma^0 {}_{0\mu} = \partial_{\mu}\Phi
+  \end{equation} as expected. 
+  A similar and straight forward calculation shows the computation of the most trivial component of the perturbed stress energy tensor working again to 1st order and using the diagonality of the metric : 
+  \begin{align}
+      T^0 {}_i = \partial_0\Phi \partial^{i}\Phi - g^0 {}_i(\frac{1}{2}\partial_{\sigma}\partial^{\sigma} \Phi - V(\phi)) \nonumber \\
+      = \partial_0 \Phi\partiali \Phi +\dot{\phi_0}\partial_i(\delta \phi)
+  \end{align}
+  
+  
+  The first term is simply the unperturbed term so we have 
+  \begin{equation}
+      \delta T^0 {}_i = \dot{\phi_0}\partial_i(\delta \phi)
+  \end{equation}
+  
