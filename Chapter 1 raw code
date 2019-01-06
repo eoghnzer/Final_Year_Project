@@ -623,5 +623,46 @@ To achieve a full solution to (1.73) we use the result from (hobson et al) that 
     \xi_{\vec{k}} = \frac{1}{\sqrt{2k^3}}\frac{i + k(\eta_{end}-\eta)}{\eta_{end} - \eta} exp(-ik\eta)
 \end{equation}
 
+Let us now examine the limit we took previously of when $k \ll aH$. Substituting the above relation so that the solution contains $aH$ we have that (1.77) becomes 
+\begin{align}
+    \xi_{\vec{k}} &= \frac{1}{\sqrt{2k^3}}\frac{i + k(\frac{1}{aH}}{\frac{1}{aH}} \exp{-ik\eta_{end}}\exp{\frac{ik}{aH}} \nonumber \\
+    &= \frac{1}{\sqrt{2k^3}}(aHi + k)\exp{-ik\eta_{end}}\exp{\frac{ik}{aH}} \nonumber \\
+    &= \frac{1}{\sqrt{2k^3}} aHi
+\end{align}
+since $k \ll aH$. Then using the defintion of $\xi_{\vec{k}} = \alpha \zeta_{\vec{k}}$ we have 
+\begin{equation}
+    \zeta_{\vec{k}} \approx \frac{H^2}{\sqrt{2k^3}}\frac{i}{\dot{\phi_0}}
+\end{equation}
+And since (\frac{H^2}{\dot{\phi_0}}) is $\approx$ constant we have again that $\zeta_{\vec{k}}$ is constant outside the Hubble radius and so also at the moment of crossing the Hubble radius itself. 
 
+\subsection{Power Spectrum}
+The definition of a power spectrum is a matter of convention. The defintion given in Hobson is rather tedious and is defined as "The power spectrum of a given spatially varying field is defined as the contribution to the local variance of the field per unit logarithmic interval in k". This defintion is long winded and I prefer the more intuitive defintion of the power spectrum as $\textit{the fourier transform of the correlation function}$ where the correlation function is a function that in general, describes the probability of finding a given galaxy (or cluster of mass) within a certain distance of a randomly selected galaxy. 
+
+We will now derive the curvature spectrum $ P_{\zeta}$ of a single scalar field. From the above defintions, 
+\begin{equation}
+    \langle \zeta(\vec{x})\zeta^* (\vec{x})\rangle \equiv \int^{\infty}_0  P_{\zeta}(k) d(\ln{k})
+\end{equation}
+where $\langle ... \rangle$ is the expectation value. 
+Expanding on (1.80) we have 
+\begin{align}
+    \langle \zeta(\vec{x})\zeta^* (\vec{x})\rangle &= \int d^3\vec{x} \zeta(\vec{x})\zeta^* (\vec{x}) \nonumber \\
+    &= \frac{1}{2\pi^3}\int d^3\vec{x} d^3\vec{k} d^3\vec{k'} \zeta_{\vec{k}}\zeta_{\vec{k'}} \exp{i(\vec{k}-\vec{k'})\dot\vec{x}} 
+\end{align}
+
+Now using the definition of the dirac delta function and the fact that $d^3\vec{k} = 4\pi k^2 dk$ in this case :
+\begin{align}
+    \langle \zeta(\vec{x})\zeta^* (\vec{x})\rangl &= 4\pi \int^{\infty}_0 \int k^2 dk d^3\vec{k'} \zeta_{\vec{k}}\zeta_{\vec{k'}} \delta(\vec{k}-\vec{k'}) \nonumber \\
+    &= 4\pi \int^{\infty}_0 k^2 dk \lbrack \int d^3\vec{k'}\zeta_{\vec{k}}\zeta_{\vec{k'}} \rbrack \delta(\vec{k}-\vec{k'}) = \int^{\infty}_0 P_{\zeta} \frac{1}{k} dk \nonumber \\
+    &\Rightarrow 4\pi \int^{\infty}_0 k^3 \frac{\langle \zeta_{\vec{k}} \zeta^*_{\vec{k'}} \rangle }{(2\pi)^3} \delta(\vec{k}-\vec{k'}) = \int^{\infty}_0 P_{\zeta} dk
+\end{align}
+
+where in the last two lines we used the defintion of the expectation value. Now equating the integrands : 
+\begin{equation}
+    \langle \zeta_{\vec{k}} \zeta^*_{\vec{k'}} \rangle = \frac{2\pi^2}{k^3} P_{\zeta}(\vec{k}) \delta(\vec{k}-\vec{k'})
+\end{equation}
+Now using (1.79) and solving for $P_{\zeta}(\vec{k})$ we have 
+
+\begin{equation}
+    P_{\zeta}(\vec{k}) = (\frac{H^2}{2\pi \dot{\phi_0}})\Big\rvert_{k = aH}
+\end{equation}
 
