@@ -591,5 +591,37 @@ To compute a spectrum of curvature perturbations, we need to know what sets the 
 
 To begin teh discussion, we first switch to conformal time $\eta$ and to a new variable $\xi$ with $\xi_{\vec{k}} = \frac{a \dot{\phi_0}}{H} \zeta_{\vec{k}} $
 
+As stated in (hobson et al) the decoupled 2nd order equation now becomes 
+\begin{equation}
+    \xi_{\vec{k}}'' + (k^2 - \frac{\alpha"}{\alpha})\xi_{\vec{k}} = 0
+\end{equation}
+where $\frac{\alpha"}{\alpha}$ is the mass term dependent on derivatives of $\phi_0$ and also $a$ and $H$. To simplify the mass term we use the slow roll approximation which neglects all higher order derivative and power terms of $\phi_0$ leaving us with : 
+\begin{equation}
+    \xi_{\vec{k}}'' + (k^2 - 2a^2H)\xi_{\vec{k}} = 0
+\end{equation}
+
+
+This form of the equations allows us to examine the perturbations inside and outside the hubble radius. When $k << aH \Rightarrow 1/k >> 1\aH$ (i.e. when the perturbation length scale is outside the Hubble radius) we see exponential growth in $\xi_{\vec{k}}$. If, in this case we can thus neglect k, returning to (1.72) :
+\begin{align}
+    \frac{\xi''_{\vec{k}}}{\xi_{\vec{k}}} = \frac{\alpha''}{\alpha} \nonumber \\
+    \xi_{\vec{k}} \propto \alpha 
+\end{align}
+But since $\xi_{\vec{k}} = \alpha \zeta_{\vec{k}}$ this means that the perturbation $\zeta_{\vec{k}}$ is a constant outside the Hubble radius! 
+On the other hand in the case where $k \gg aH \Rightarrow 1/k \ll 1/aH$ then we have 
+\begin{equation}
+    \xi''_{\vec{k}}} + k^2\xi_{\vec{k}}} \approx 0
+\end{equation}
+which is simply oscillatory motion. This means that the curvature perturbation $\zeta_{\vec{k}}$ oscillates when inside the Hubble radius, until the comoving Hubble radius drops below $1/k$ at which point the perturbation freezes and remains constant until such point as when the comoving Hubble radius overtakes it again at a much later point in history. 
+The solution to (1.75) are trivial and given by 
+\begin{equation}
+    \xi_{\vec{k}} = \frac{1}{\sqrt{2k}} exp(-ik\eta)
+\end{equation}
+where the normalisation coefficient is from the quantisation normalisation condition that the conserved current of a field is unity or that the norm of a state in unity. 
+
+To achieve a full solution to (1.73) we use the result from (hobson et al) that we can write $\eta = \eta_{end} = \frac{1}{aH}$ so that (1.73) is exactly solvable with solution 
+\begin{equation}
+    \xi_{\vec{k}} = \frac{1}{\sqrt{2k^3}}\frac{i + k(\eta_{end}-\eta)}{\eta_{end} - \eta} exp(-ik\eta)
+\end{equation}
+
 
 
