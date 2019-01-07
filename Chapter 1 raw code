@@ -665,4 +665,39 @@ Now using (1.79) and solving for $P_{\zeta}(\vec{k})$ we have
 \begin{equation}
     P_{\zeta}(\vec{k}) = (\frac{H^2}{2\pi \dot{\phi_0}})\Big\rvert_{k = aH}
 \end{equation}
+Since we are working in the slow roll approximation, where $H^2$ is slowly decreasing and $\dot{phi_0}$ is roughly constant, then to first order, the power spectrum for the curvature is $\approx$ constant. This $\textit{scale invariant}$ spectrum is also known as the Zel'dovich Harrison Spectrum. If one were to be slightly more accurate, then for modes with higher k, which leave the radius later in time, would have a slightly lower spectrum since H is slowly decreasing. 
 
+\subsection{Density Matter Perturbations}
+Before we proceed, it is useful to give a brief mention to density matter perturbations. To this end, we define the new variable $\mathcal{R} \equiv -\Phi\Big\rvert_{co}$. This means that $\Phi$ is to be evaluated on comoving slices, i.e. frames where the perfect fluid that makes up the universe appears to be at rest. it measures the spatial curvature of a given frame.
+Referencing (1.71), for a scalar density perturbation $\delta \rho$ the above variable, the spatial curvature of a comoving slice can be written as 
+\begin{equation}
+    \mathcal{R = }-\zeta_{\rho} + \frac{H\delta \rho}{\dot{\rho}}
+\end{equation}
+
+The relative components of the stress energy tensor are the $(0,ith)$ components which are $\delta T^0 {}_i \dot{\phi_0} \partiali_i(\delta \phi)$ but since we are in a comoving frame the momentum density vanishes so we have that this equals zero. Therefore there is no spatial dependence on the scalar field perturbations and it vanishes, so we have 
+\begin{equation}
+    \mathcal{R} = -\zeta
+\end{equation}
+
+Now we can see that the spectrum of curvature perturbations is completely equivalent to the spectrum of of gravitational fluctuations in the potential $\Phi$ which in turn can be related to the spectrum of matter density perturbations $\delta \rho$. To obtain the equivalent equations for this we need to work under the assumption, not of a scalar field but of a perfect fluid and can be seen in (insert reference re density perturbations). A short summmary can be written if we invoke the fact on sub horizon (sub Hubble radius) scales the resulting equations are the same. In that case the perturbations obey the gravitational version of poissons equation (which makes sense since the gravitational field associated with perturbations is weak)
+\begin{equation}
+    \vec{\nabla^2}(\delta \Phi) = 4\pi G(\delta \rho)
+\end{equation}
+It is more conventional to use the fractional density fluctiation $\delta \equiv \frac{\delta \rho}{\rho_0}$ and again working in the fourier space (1.87) becomes 
+\begin{equation}
+    \delta \Phi_k = -\frac{4 \pi G \rho_0 a^2}{k^2}\delta_k 
+\end{equation}
+and using the first Friedmann equation that $\rho_0 = \frac{3H^2}{8\pi G}$ we have 
+\begin{equation}
+    \delta_k = -\frac{2}{3}(\frac{k}{aH})^2\delta \Phi_k
+\end{equation}
+So we have that $\langle \mid\delta_k\mid^2 \rangle \propto k^4 \langle \mid\delta\Phi_k\mid^2\rangle$. Now defining the matter power spectrum by $P_{\delta}(k) \equiv \langle \mid\delta_k\mid^2\rangle$ we have that 
+\begin{equation}
+    P_{\delta}(k) \propto kP_{\mathcal{R}}(k) \propto kP_{\zeta}(k)
+\end{equation}
+For slow roll inflation then, where $P_{\zeta}(k) \approx$ constant, we have 
+\begin{equation}
+    P_{\delta}(k) \propto k
+\end{equation}
+ In general we actually have $P_{\delta}(k) \propto k^n$, where $n$ is the promordial spectral index.
+ 
