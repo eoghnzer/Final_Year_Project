@@ -94,3 +94,29 @@ Where $E_{ij} = \frac{1}{2}( \Dot{h_{ij}} - \nabla_i\N_j - \nabla_j\N_i)$ and $E
  \end{equation}
  
  The constraint equation for $\N^i$ requires slightly more work. First notice that $\N^{-1}(\Dot{\phi} - \N^i \partial_i \phi )^2 = \N \pi_{\phi} ^2$ so that there is no dependence on $\N^i$. 
+ The relevant part of the action with $\N^i$ dependence is then :
+ \begin{equation}
+     S_{\N_i} = \frac{1}{2} \int \sqrt{h} \lbrack \N^{-1}(E_{lm}E^{lm} - E^2) \rbrack
+ \end{equation}
+Consider the first term $E_{lm}E^{lm} \equiv (E_{lm})^2$ so that :
+\begin{equation}
+    \frac{\delta (E_{lm})^2}{\delta (\nabla_j \N^i)} = 2E_{lm}\frac{\delta( E_{lm})}{\delta(\nabla_j \N^i)}
+\end{equation}
+ And recalling the definition of $E_{lm}$ in (2.9) we have 
+ \begin{equation}
+     \frac{\delta (E_{lm}}{\delta (\nabla_i \N^j}) = \frac{1}{2}(-\delta^j _l \delta_{mi} - \delta^j _m \delta_{li})
+ \end{equation}
+ so that with (2.19) we get 
+ \begin{equation}
+     \frac{\delta (E_{lm})^2}{\delta (\nabla_j \N^i)} = -2E^i {}_j
+ \end{equation}
+ Similarly we get 
+ \begin{equation}
+     \frac{\delta (E^2)}{\delta(\nabla_i \N^j)} = -2E\delta^i {}_j
+ \end{equation}
+ Combing these two results and by the Euler Lagrange equations, we have the constraint equation for $\N^i$ :
+ \begin{equation}
+    \nabla_i(\N^{-1}(E^i {}_j -E\delta^i {}_j)) = 0
+ \end{equation}
+ 
+ 
